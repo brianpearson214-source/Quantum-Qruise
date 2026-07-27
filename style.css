@@ -246,6 +246,15 @@ p { margin: 0 0 1em; }
 .about .lede { margin-left: auto; margin-right: auto; }
 .about h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 
+.about-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 1.6em auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 /* Details */
 .details {
   background: var(--foam);
