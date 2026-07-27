@@ -338,6 +338,57 @@ p { margin: 0 0 1em; }
 .rsvp h2 { color: var(--white); font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
 .rsvp .lede { color: var(--foam); margin-left: auto; margin-right: auto; margin-bottom: 2em; }
 
+/* FAQ */
+.faq {
+  padding: 80px 0;
+  text-align: center;
+}
+.faq h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.9em; }
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--foam);
+  border-radius: var(--radius);
+  padding: 4px 24px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 28px 18px 0;
+  font-weight: 700;
+  color: var(--navy);
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ocean);
+  transition: transform 0.15s ease;
+}
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item p {
+  color: var(--deep-blue);
+  margin: 0 0 20px;
+}
+
 /* Footer */
 .site-footer {
   background: var(--navy);
