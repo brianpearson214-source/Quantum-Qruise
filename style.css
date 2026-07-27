@@ -192,6 +192,65 @@ p { margin: 0 0 1em; }
   margin: 0 auto 2.2em;
 }
 
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 2.2em;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 68px;
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+}
+
+.countdown-value {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+}
+
+.countdown-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: var(--foam);
+  margin-top: 2px;
+}
+
+.countdown-note {
+  color: var(--foam);
+  font-size: 1.05rem;
+  margin-bottom: 2.2em;
+}
+
+.add-to-calendar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.calendar-link {
+  color: var(--foam);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1px;
+}
+.calendar-link:hover { color: var(--gold); border-color: var(--gold); }
+
 .hero-facts {
   display: flex;
   justify-content: center;
@@ -254,6 +313,33 @@ p { margin: 0 0 1em; }
   border: 1px solid var(--sky);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+/* Recap */
+.recap {
+  padding: 80px 0;
+  text-align: center;
+}
+.recap h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.recap .lede { margin: 0 auto 2em; }
+
+.recap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.recap-photo {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--sky);
+  border-radius: var(--radius);
+  background: var(--foam);
+  color: var(--ocean);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 /* Details */
