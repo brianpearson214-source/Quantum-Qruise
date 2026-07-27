@@ -27,7 +27,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Judson', 'Georgia', serif;
+  font-weight: 700;
   margin: 0 0 0.4em;
   color: var(--navy);
 }
