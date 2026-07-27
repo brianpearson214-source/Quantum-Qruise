@@ -251,6 +251,7 @@ p { margin: 0 0 1em; }
   width: 100%;
   max-width: 720px;
   margin: 1.6em auto;
+  border: 1px solid var(--sky);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
