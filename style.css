@@ -179,15 +179,6 @@ p { margin: 0 0 1em; }
 
 .hero .eyebrow { color: var(--sky); }
 
-.event-title {
-  color: var(--white);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 700;
-  font-size: 1rem;
-  margin: 0 0 0.8em;
-}
-
 .hero h1 {
   color: var(--white);
   font-size: clamp(2.4rem, 5vw, 3.6rem);
