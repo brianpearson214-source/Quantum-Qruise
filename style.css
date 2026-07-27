@@ -233,24 +233,6 @@ p { margin: 0 0 1em; }
   margin-bottom: 2.2em;
 }
 
-.add-to-calendar {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-}
-
-.calendar-link {
-  color: var(--foam);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 1px;
-}
-.calendar-link:hover { color: var(--gold); border-color: var(--gold); }
-
 .hero-facts {
   display: flex;
   justify-content: center;
