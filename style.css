@@ -144,10 +144,16 @@ p { margin: 0 0 1em; }
   font-size: 1.25rem;
 }
 
-.logo-icon {
-  width: 30px;
-  height: 30px;
-  color: var(--gold);
+.logo-badge {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.logo-badge-footer {
+  width: 68px;
+  height: 68px;
 }
 
 .nav-cta {
