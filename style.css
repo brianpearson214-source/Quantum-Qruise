@@ -318,33 +318,6 @@ p { margin: 0 0 1em; }
   box-shadow: var(--shadow);
 }
 
-/* Recap */
-.recap {
-  padding: 80px 0;
-  text-align: center;
-}
-.recap h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
-.recap .lede { margin: 0 auto 2em; }
-
-.recap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.recap-photo {
-  aspect-ratio: 4 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed var(--sky);
-  border-radius: var(--radius);
-  background: var(--foam);
-  color: var(--ocean);
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
 /* Details */
 .details {
   background: var(--foam);
