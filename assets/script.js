@@ -1,5 +1,5 @@
-// Update this when the real September date is locked in, it drives the countdown timer.
-var EVENT_START = new Date('2026-09-03T17:30:00-05:00');
+// Drives the hero countdown timer.
+var EVENT_START = new Date('2026-09-10T17:30:00-05:00');
 
 function pad2(n) {
   return String(n).padStart(2, '0');
