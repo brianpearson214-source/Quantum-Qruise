@@ -46,6 +46,14 @@ p { margin: 0 0 1em; }
   font-size: 0.85rem;
   font-weight: 600;
 }
+.sponsor-banner a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sponsor-banner a:hover {
+  color: var(--deep-blue);
+}
 
 .container {
   max-width: 1080px;
