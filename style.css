@@ -35,6 +35,18 @@ h1, h2, h3 {
 
 p { margin: 0 0 1em; }
 
+.sponsor-banner {
+  background: var(--gold);
+  text-align: center;
+  padding: 10px 20px;
+}
+.sponsor-banner p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
