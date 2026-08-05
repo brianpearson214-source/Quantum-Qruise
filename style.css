@@ -470,4 +470,9 @@ p { margin: 0 0 1em; }
   .hero-facts { gap: 28px; }
   .navbar { flex-direction: column; gap: 14px; padding-top: 20px; }
   .about, .details, .sponsors { padding: 60px 0; }
+
+  /* Stacked one-per-row, the full-size slots ran to ~1.5 screens of empty
+     boxes. Two across at a shorter height keeps the section a glance. */
+  .sponsor-wall { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .sponsor-slot { padding: 22px 10px; font-size: 0.8rem; }
 }
