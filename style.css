@@ -451,6 +451,15 @@ p { margin: 0 0 1em; }
   color: var(--deep-blue);
   margin: 0 0 20px;
 }
+.faq-item .faq-intro { margin-bottom: 10px; }
+.faq-list-items {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  color: var(--deep-blue);
+  line-height: 1.55;
+}
+.faq-list-items li { margin-bottom: 5px; }
+.faq-list-items li:last-child { margin-bottom: 0; }
 
 /* Footer */
 .site-footer {
