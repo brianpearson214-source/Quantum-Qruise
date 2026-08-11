@@ -318,6 +318,35 @@ p { margin: 0 0 1em; }
   box-shadow: var(--shadow);
 }
 
+/* Last year gallery */
+.gallery {
+  padding: 20px 0 80px;
+  text-align: center;
+}
+.gallery h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5em; }
+.gallery-lede {
+  max-width: 620px;
+  margin: 0 auto 2em;
+  color: var(--ink);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.photo-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: var(--foam);
+  border: 1px solid var(--sky);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 /* Details */
 .details {
   background: var(--foam);
@@ -475,10 +504,19 @@ p { margin: 0 0 1em; }
 .footer-copy { font-size: 0.85rem; color: rgba(234, 247, 251, 0.6); margin: 0; }
 
 /* Responsive */
+@media (max-width: 860px) {
+  .photo-grid { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 600px) {
   .hero-facts { gap: 28px; }
   .navbar { flex-direction: column; gap: 14px; padding-top: 20px; }
   .about, .details, .sponsors { padding: 60px 0; }
+  .gallery { padding: 10px 0 55px; }
+
+  /* One across, not two. Two columns fits more on screen, but at ~175px wide
+     the faces in the group shots stop being readable, which is the whole point. */
+  .photo-grid { grid-template-columns: 1fr; gap: 12px; }
 
   /* Stacked one-per-row, the full-size slots ran to ~1.5 screens of empty
      boxes. Two across at a shorter height keeps the section a glance. */
