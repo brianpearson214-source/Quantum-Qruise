@@ -333,7 +333,7 @@ p { margin: 0 0 1em; }
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 14px;
 }
 .photo-grid img {
   display: block;
@@ -346,6 +346,20 @@ p { margin: 0 0 1em; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+
+.gallery-more {
+  margin: 26px 0 0;
+  font-size: 1.02rem;
+}
+.gallery-more a {
+  color: var(--gold-dark);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(217, 154, 31, 0.35);
+  padding-bottom: 2px;
+}
+.gallery-more a::after { content: " \2192"; }
+.gallery-more a:hover { border-bottom-color: var(--gold-dark); }
 
 /* Details */
 .details {
