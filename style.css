@@ -311,6 +311,9 @@ p { margin: 0 0 1em; }
 .about-image {
   display: block;
   width: 100%;
+  /* Required: the width/height attributes on the tag would otherwise force a
+     630px height and stretch the image. */
+  height: auto;
   max-width: 720px;
   margin: 1.6em auto;
   border: 1px solid var(--sky);
