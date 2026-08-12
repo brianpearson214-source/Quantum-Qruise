@@ -21,7 +21,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Judson loads async so a round trip to Google never holds up first paint.
+     Headings show in the Georgia fallback for a beat, then swap. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap"></noscript>
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -42,7 +48,7 @@
 <header class="hero">
   <nav class="navbar">
     <div class="wordmark">
-      <img class="logo-badge" src="assets/logo.jpg" alt="Quantum Qruise">
+      <img class="logo-badge" src="assets/logo-192.jpg" width="192" height="192" alt="Quantum Qruise">
     </div>
     <a class="nav-cta" href="#rsvp">RSVP</a>
   </nav>
@@ -109,7 +115,10 @@
     <div class="container">
       <p class="eyebrow">Why We're Qruising</p>
       <h2>Chicago's quantum community, all in one place.</h2>
-      <img class="about-image" src="assets/iqmp.jpg" alt="Rendering of the Illinois Quantum and Microelectronics Park on Chicago's lakefront">
+      <img class="about-image" src="assets/iqmp.jpg"
+           srcset="assets/iqmp-760.jpg 760w, assets/iqmp.jpg 1200w"
+           sizes="(max-width: 768px) calc(100vw - 48px), 720px"
+           width="1200" height="630" loading="lazy" decoding="async" alt="Rendering of the Illinois Quantum and Microelectronics Park on Chicago's lakefront">
       <p class="lede">Chicago's quantum scene is growing fast, from university labs to startups to the companies scaling quantum hardware and software. But the people doing that work don't get many chances to just be in a room together. Quantum Qruise is that chance: one relaxed evening to catch up, meet new people, and celebrate how far this community has come.</p>
     </div>
   </section>
@@ -120,12 +129,30 @@
       <h2>Last Year on the River</h2>
       <p class="gallery-lede">Our first Qruise sold out and sent everyone home with new contacts. Same boat, same route, back bigger for 2026.</p>
       <div class="photo-grid">
-        <img src="assets/qruise-2025-01.jpg" width="760" height="506" loading="lazy" decoding="async" alt="Guests on the top deck as the Centennial Fountain arcs over the Chicago River">
-        <img src="assets/qruise-2025-02.jpg" width="760" height="506" loading="lazy" decoding="async" alt="A group of six guests gathered along the deck rail at sunset">
-        <img src="assets/qruise-2025-03.jpg" width="760" height="506" loading="lazy" decoding="async" alt="Two attendees laughing mid-conversation with the skyline behind them">
-        <img src="assets/qruise-2025-04.jpg" width="760" height="506" loading="lazy" decoding="async" alt="Guests mingling in small groups on the deck as the boat passes under a bridge">
-        <img src="assets/qruise-2025-05.jpg" width="760" height="506" loading="lazy" decoding="async" alt="Three attendees with arms around each other on the deck">
-        <img src="assets/qruise-2025-06.jpg" width="760" height="506" loading="lazy" decoding="async" alt="Two guests seated along the rail deep in conversation">
+        <img src="assets/qruise-2025-01.jpg"
+             srcset="assets/qruise-2025-01-400.jpg 400w, assets/qruise-2025-01-560.jpg 560w, assets/qruise-2025-01.jpg 760w"
+             sizes="(max-width: 600px) calc(50vw - 29px), (max-width: 860px) calc(50vw - 31px), (max-width: 1128px) calc(33.3vw - 25px), 335px"
+             width="760" height="506" loading="lazy" decoding="async" alt="Guests on the top deck as the Centennial Fountain arcs over the Chicago River">
+        <img src="assets/qruise-2025-02.jpg"
+             srcset="assets/qruise-2025-02-400.jpg 400w, assets/qruise-2025-02-560.jpg 560w, assets/qruise-2025-02.jpg 760w"
+             sizes="(max-width: 600px) calc(50vw - 29px), (max-width: 860px) calc(50vw - 31px), (max-width: 1128px) calc(33.3vw - 25px), 335px"
+             width="760" height="506" loading="lazy" decoding="async" alt="A group of six guests gathered along the deck rail at sunset">
+        <img src="assets/qruise-2025-03.jpg"
+             srcset="assets/qruise-2025-03-400.jpg 400w, assets/qruise-2025-03-560.jpg 560w, assets/qruise-2025-03.jpg 760w"
+             sizes="(max-width: 600px) calc(50vw - 29px), (max-width: 860px) calc(50vw - 31px), (max-width: 1128px) calc(33.3vw - 25px), 335px"
+             width="760" height="506" loading="lazy" decoding="async" alt="Two attendees laughing mid-conversation with the skyline behind them">
+        <img src="assets/qruise-2025-04.jpg"
+             srcset="assets/qruise-2025-04-400.jpg 400w, assets/qruise-2025-04-560.jpg 560w, assets/qruise-2025-04.jpg 760w"
+             sizes="(max-width: 600px) calc(50vw - 29px), (max-width: 860px) calc(50vw - 31px), (max-width: 1128px) calc(33.3vw - 25px), 335px"
+             width="760" height="506" loading="lazy" decoding="async" alt="Guests mingling in small groups on the deck as the boat passes under a bridge">
+        <img src="assets/qruise-2025-05.jpg"
+             srcset="assets/qruise-2025-05-400.jpg 400w, assets/qruise-2025-05-560.jpg 560w, assets/qruise-2025-05.jpg 760w"
+             sizes="(max-width: 600px) calc(50vw - 29px), (max-width: 860px) calc(50vw - 31px), (max-width: 1128px) calc(33.3vw - 25px), 335px"
+             width="760" height="506" loading="lazy" decoding="async" alt="Three attendees with arms around each other on the deck">
+        <img src="assets/qruise-2025-06.jpg"
+             srcset="assets/qruise-2025-06-400.jpg 400w, assets/qruise-2025-06-560.jpg 560w, assets/qruise-2025-06.jpg 760w"
+             sizes="(max-width: 600px) calc(50vw - 29px), (max-width: 860px) calc(50vw - 31px), (max-width: 1128px) calc(33.3vw - 25px), 335px"
+             width="760" height="506" loading="lazy" decoding="async" alt="Two guests seated along the rail deep in conversation">
       </div>
     </div>
   </section>
@@ -277,13 +304,13 @@
 <footer class="site-footer">
   <div class="container footer-content">
     <div class="wordmark footer-wordmark">
-      <img class="logo-badge logo-badge-footer" src="assets/logo.jpg" alt="Quantum Qruise">
+      <img class="logo-badge logo-badge-footer" src="assets/logo-192.jpg" width="192" height="192" loading="lazy" decoding="async" alt="Quantum Qruise">
     </div>
     <p class="footer-contact">Questions? <a href="mailto:brian.pearson@quantumqruise.com">brian.pearson@quantumqruise.com</a></p>
     <p class="footer-copy">&copy; 2026 Quantum Qruise LLC · Chicago, IL</p>
   </div>
 </footer>
 
-<script src="assets/script.js"></script>
+<script src="assets/script.js" defer></script>
 </body>
 </html>
