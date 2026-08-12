@@ -7,6 +7,9 @@
   --white: #ffffff;
   --gold: #f2b134;
   --gold-dark: #d99a1f;
+  /* Darker gold for text on light backgrounds. #d99a1f is only 2.44:1 on
+     white, under the 4.5:1 WCAG AA minimum; this is 4.82:1. */
+  --gold-text: #9c6708;
   --coral: #f2704b;
   --ink: #123047;
   --shadow: 0 10px 30px rgba(11, 61, 92, 0.15);
@@ -70,7 +73,7 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.14em;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   margin: 0 0 0.6em;
 }
 

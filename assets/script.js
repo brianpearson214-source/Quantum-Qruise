@@ -1,5 +1,7 @@
 // Drives the hero countdown timer.
-var EVENT_START = new Date('2026-09-17T17:30:00-05:00');
+// Counts down to arrival time, not cast-off. The boat leaves at 17:30
+// and will not wait, so the timer should never imply people have until then.
+var EVENT_START = new Date('2026-09-17T17:00:00-05:00');
 
 function pad2(n) {
   return String(n).padStart(2, '0');
