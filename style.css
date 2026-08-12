@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   color: var(--ink);
   background: var(--white);
   line-height: 1.5;
@@ -32,6 +32,10 @@ h1, h2, h3 {
   margin: 0 0 0.4em;
   color: var(--navy);
 }
+
+/* Every section heading shares one size. Set here rather than per section so a
+   new section can't quietly inherit the browser default the way .sponsors did. */
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 
 p { margin: 0 0 1em; }
 
@@ -160,9 +164,6 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Georgia', serif;
-  font-weight: 700;
-  font-size: 1.25rem;
 }
 
 .logo-badge {
@@ -233,7 +234,7 @@ p { margin: 0 0 1em; }
 }
 
 .countdown-value {
-  font-family: 'Georgia', serif;
+  font-family: 'Judson', 'Georgia', serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--gold);
@@ -306,7 +307,6 @@ p { margin: 0 0 1em; }
   text-align: center;
 }
 .about .lede { margin-left: auto; margin-right: auto; }
-.about h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 
 .about-image {
   display: block;
@@ -323,7 +323,7 @@ p { margin: 0 0 1em; }
   padding: 20px 0 80px;
   text-align: center;
 }
-.gallery h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5em; }
+.gallery h2 { margin-bottom: 0.5em; }
 .gallery-lede {
   max-width: 620px;
   margin: 0 auto 2em;
@@ -353,7 +353,7 @@ p { margin: 0 0 1em; }
   padding: 80px 0;
 }
 .details .eyebrow, .details h2 { text-align: center; }
-.details h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.9em; }
+.details h2 { margin-bottom: 0.9em; }
 .details .container > .eyebrow { text-align: center; }
 
 .detail-cards {
@@ -435,7 +435,7 @@ p { margin: 0 0 1em; }
   padding: 80px 0;
   text-align: center;
 }
-.faq h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.9em; }
+.faq h2 { margin-bottom: 0.9em; }
 
 .faq-list {
   max-width: 720px;
