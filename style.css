@@ -514,9 +514,9 @@ p { margin: 0 0 1em; }
   .about, .details, .sponsors { padding: 60px 0; }
   .gallery { padding: 10px 0 55px; }
 
-  /* One across, not two. Two columns fits more on screen, but at ~175px wide
-     the faces in the group shots stop being readable, which is the whole point. */
-  .photo-grid { grid-template-columns: 1fr; gap: 12px; }
+  /* Two across, three rows. Keeps the gallery to about one screen instead of
+     six stacked photos, at the cost of smaller faces in the group shots. */
+  .photo-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
 
   /* Stacked one-per-row, the full-size slots ran to ~1.5 screens of empty
      boxes. Two across at a shorter height keeps the section a glance. */
