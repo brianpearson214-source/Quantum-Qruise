@@ -402,20 +402,37 @@ p { margin: 0 0 1em; }
 
 .sponsor-wall {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 880px;
   margin: 0 auto 3em;
 }
 
 .sponsor-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
   border: 2px dashed var(--sky);
   border-radius: var(--radius);
-  padding: 36px 16px;
+  padding: 24px 16px;
   color: var(--ocean);
   font-weight: 600;
   font-size: 0.9rem;
   background: var(--foam);
+}
+
+/* A confirmed sponsor gets a solid border, so it never reads as another
+   empty placeholder sitting next to the dashed ones. */
+.sponsor-slot-filled {
+  border-style: solid;
+  background: var(--white);
+}
+.sponsor-slot img {
+  display: block;
+  width: 100%;
+  max-width: 210px;
+  height: auto;
 }
 
 /* RSVP */
