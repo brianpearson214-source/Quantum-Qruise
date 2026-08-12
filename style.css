@@ -452,6 +452,19 @@ p { margin: 0 0 1em; }
   background: var(--foam);
 }
 
+/* A claimed berth: solid border and a filled ground so it reads as taken
+   rather than as another empty placeholder. No logo until approval lands. */
+.sponsor-slot-reserved {
+  border-style: solid;
+  border-color: var(--ocean);
+  background: var(--white);
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
 
 
 /* RSVP */
