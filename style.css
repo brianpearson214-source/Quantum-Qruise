@@ -358,14 +358,14 @@ p { margin: 0 0 1em; }
 
 .detail-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
 .detail-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 32px 24px;
+  padding: 32px 20px;
   text-align: center;
   box-shadow: var(--shadow);
 }
@@ -504,6 +504,11 @@ p { margin: 0 0 1em; }
 .footer-copy { font-size: 0.85rem; color: rgba(234, 247, 251, 0.6); margin: 0; }
 
 /* Responsive */
+@media (max-width: 1080px) {
+  /* Below this the four cards would squeeze under 240px and their titles wrap. */
+  .detail-cards { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 860px) {
   .photo-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -513,6 +518,7 @@ p { margin: 0 0 1em; }
   .navbar { flex-direction: column; gap: 14px; padding-top: 20px; }
   .about, .details, .sponsors { padding: 60px 0; }
   .gallery { padding: 10px 0 55px; }
+  .detail-cards { grid-template-columns: 1fr; }
 
   /* Two across, three rows. Keeps the gallery to about one screen instead of
      six stacked photos, at the cost of smaller faces in the group shots. */
