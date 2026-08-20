@@ -452,6 +452,22 @@ p { margin: 0 0 1em; }
   background: var(--foam);
 }
 
+/* A filled berth. Logos are capped by height rather than width so a squat
+   wordmark like Clayco does not tower over a wide one like JPMorganChase. */
+.sponsor-slot-logo {
+  border-style: solid;
+  border-color: var(--sky);
+  background: var(--white);
+  padding: 16px 18px;
+}
+.sponsor-slot-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 32px;
+  max-width: 210px;
+}
+
 /* A claimed berth: solid border and a filled ground so it reads as taken
    rather than as another empty placeholder. No logo until approval lands. */
 .sponsor-slot-reserved {
