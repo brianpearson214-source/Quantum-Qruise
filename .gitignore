@@ -6,3 +6,6 @@ Quantum Qruise Photos 2025/
 lumatitle.jpg
 quantumqruiseluma.jpg
 quantum-qruise-host-avatar.jpg
+
+# Never commit tax, banking, or invoice documents to this public repo
+*.pdf
