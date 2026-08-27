@@ -454,6 +454,9 @@ p { margin: 0 0 1em; }
   border-radius: var(--radius);
   min-height: 100px;
   padding: 20px 16px;
+  /* Grid items default to min-width:auto, which lets a wide logo push its track
+     wider than the container. Deloitte's wordmark was overflowing by 15px. */
+  min-width: 0;
   color: var(--ocean);
   font-weight: 600;
   font-size: 0.9rem;
@@ -473,7 +476,9 @@ p { margin: 0 0 1em; }
   width: auto;
   height: auto;
   max-height: 32px;
-  max-width: 210px;
+  /* 210px caps the wide wordmarks on desktop; the 100% term keeps them inside
+     the tile once it narrows, so nothing ever touches the padding edge. */
+  max-width: min(210px, 100%);
 }
 
 /* A claimed berth: solid border and a filled ground so it reads as taken
@@ -600,7 +605,11 @@ p { margin: 0 0 1em; }
   /* Stacked one-per-row, the full-size slots ran to ~1.5 screens of empty
      boxes. Two across at a shorter height keeps the section a glance. */
   .tier-slots { gap: 10px; }
-  .tier-slots-1 { max-width: 172px; }
+  /* Single-logo tiers get a wider tile on phones. At 172px a long wordmark like
+     JPMorganChase was width-starved down to 22px tall while everything else sat
+     at 32px; 250px lets it reach full height. Bigger tile for the higher tier
+     also matches how the tiers are priced. */
+  .tier-slots-1 { max-width: 250px; }
   .tier-slots-2 { max-width: 354px; }
   .sponsor-slot { min-height: 76px; padding: 12px 8px; font-size: 0.72rem; }
   .tier-label { font-size: 0.85rem; letter-spacing: 0.14em; }
