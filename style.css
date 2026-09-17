@@ -480,6 +480,9 @@ p { margin: 0 0 1em; }
      the tile once it narrows, so nothing ever touches the padding edge. */
   max-width: min(210px, 100%);
 }
+/* A two-line wordmark at the 32px cap reads half the size of its neighbours,
+   so stacked logos get more height to match their visual weight. */
+.sponsor-slot-logo img.logo-stacked { max-height: 56px; }
 
 /* A claimed berth: solid border and a filled ground so it reads as taken
    rather than as another empty placeholder. No logo until approval lands. */
